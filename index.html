@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraFlix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+  <header>
+    <a href="https://www.aluracursos.com/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+    <a href="">Inicio</a>
+  </header>
+  
+  <div id="seletor" class="seletor">
+    <label for="select" class="seletorLabel">Selecione la lista deseada:</label><br>
+    <select id="select" class="seletorInp" onchange="mostrarLista()">
+      <option value="">Selecione</option>
+      <option value="filmes">Peliculas</option>
+      <option value="series">Series</option>
+      <option value="jogos">Juegos</option>
+    </select>
+  </div>
+  <div class="container">
+    <h1 id="title" class="off page-title"></h1>
+  </div>
+  <div id="imagens" class="imagens"></div>
+  <div id="cadastro" class="container-mod off">
+    <h1 id="cadastroTitle"></h1>
+    <br>
+    <div class="cadIn">
+      <label id="nameInLab" for="cadastroName"></label>
+      <input id="cadastroName" type="text" class="inputText" onchange="checkNome()">
+    </div>
+    <div class="cadIn">
+      <label for="cadastroImg">Link del poster:</label>
+      <input id="cadastroImg" type="text" class="inputText" onchange="checkImg()">
+    </div>
+    <div class="cadIn">
+      <label id="linkInLab" for="cadastroLink"></label>
+      <input id="cadastroLink" type="text" class="inputText">
+    </div>
+    <br>
+    <p id="cadErro"></p>
+    <button id="botaoCad" onclick="cadastrar()">Añadir</button>
+    <button onclick="mostrarLista()">Cancelar</button>
+  </div>
+  <div id="remover" class="container-mod off">
+    <h1 id="removerTitle"></h1>
+    <h6 id="removerSubTitle" class="subTitle"></h6>
+    <div id="listRem" class="listRem"></div>
+    <button id="botaoRem" onclick="removerFun()" class="remBot">Remover!</button>
+    <button onclick="mostrarLista()">Cancelar</button>
+  </div>
+  
+  <div id="rodape" class="rodape off">
+    <button onclick="trocarLista()">Editar Lista</button>
+    <button onclick="abrirCadastro()">Añadir Nuevo</button>
+    <button onclick="abrirRem()">Remover item</button>
+  </div>
+  
+  <footer class="rodape">
+    <a href="https://github.com/MargaritaLen" target="blank">
+      <img src="src/github (2).png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/margaritasl/" target="blank">
+      <img src="src/linkedin (2).png" alt="LinkedIn">
+    </a>
+    <a href="mailto:margaritasantamarialeon@gmail.com">
+      <img src="src/email (2).png" alt="E-mail">
+    </a>
+  
+  </footer>
+
+      <script src="./script.js"></script>
+</body>
+</html>
